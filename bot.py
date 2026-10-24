@@ -1,14 +1,11 @@
 import os
 import telebot
 import pandas as pd
-from dotenv import load_dotenv
 
-load_dotenv()
-
-# ⚠️ Укажите токен бота BotFather в файле .env
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+# Укажите токен бота BotFather в этой строке.
+BOT_TOKEN = ""
 if not BOT_TOKEN:
-    raise RuntimeError("Укажите BOT_TOKEN в файле .env перед запуском бота.")
+    raise RuntimeError("Укажите BOT_TOKEN в начале файла bot.py перед запуском бота.")
 
 # Инициализируем только Telegram бота
 bot = telebot.TeleBot(BOT_TOKEN)
